@@ -24,15 +24,26 @@ app.get("/api/campers", async (req, res) => {
 app.get("/api/campers/:id", async (req, res) => {
   const id = req.params.id;
 
-  const query = "SELECT * FROM campers WHERE id_camper = ?;";
-  db.query(query, id, (err, result) => {
-    if (err) {
-      console.error("Error al obtener camper: " + err.message);
-      return res.status(500).json({ mensaje: "Error al obtener camper" });
+  const query = `
+    SELECT campers.*, grupo.*, ruta.*
+    FROM campers
+    JOIN grupo ON campers.id_grupo = grupo.id_grupo
+    JOIN ruta ON campers.id_ruta = ruta.id_ruta
+    WHERE campers.id_camper = ?;
+  `;
+
+  try {
+    const results = await queryDB(query, [id]);
+
+    if (results.length === 0) {
+      return res.status(404).json({ mensaje: "Camper no encontrado" });
     }
-    console.log("Camper obtenido con éxito");
-    res.status(200).json(result);
-  });
+
+    res.status(200).json(results[0]); // Devuelve la primera fila (ya que solo se espera un resultado)
+  } catch (err) {
+    console.error("Error en la consulta: " + err.message);
+    res.status(500).json({ mensaje: "Error en la consulta" });
+  }
 });
 
 app.post("/api/campers", async (req, res) => {
@@ -91,5 +102,19 @@ app.delete("/api/campers/:id", async (req, res) => {
     res.status(200).json({ mensaje: "Camper eliminado con éxito" });
   });
 });
+
+// Querys más avanzadas
+
+function queryDB(sql, params) {
+  return new Promise((resolve, reject) => {
+    db.query(sql, params, (err, result) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(result);
+      }
+    });
+  });
+}
 
 export default app;
