@@ -1,0 +1,98 @@
+
+
+
+.bodyForm{
+    padding: 0.5em;
+    width: 75em;
+    border-radius: 3em;
+    height: 52em;
+    background-color: var(--color-beige);
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 1em;
+    margin: 0.5em;
+}
+
+.buttonForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    width: 20em;
+    height: 3.5em;
+    background-color: var(--color-blue);
+    border-radius: 5em;
+
+}
+
+.buttonForm p{
+  color:aliceblue;
+  font-size: 24px;
+  font-weight: medium;
+
+}
+
+.up{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+
+
+
+}
+
+.upDivision{
+    padding-top: 1em;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2.5em;
+}
+
+.down{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 40em;
+    padding: 1em;
+    border-radius: 3em;
+
+
+}
+
+.labelForm{
+
+    color: var(--color-font);
+    margin: 0em 0.1em 0em 0.1em;
+
+}
+
+.inputForm{
+    border-radius: 1.2em;
+    height: 2.5em;
+    
+    width: 42em;
+    border: none;
+    background-color: var(--color-primary);
+}
+.inputTitle{
+    border-radius: 1.2em;
+    height: 2.5em;
+    border: none;
+    background-color: var(--color-primary);
+
+}
+
+
+.inputFormDescripcion{
+    border-radius: 2em;
+    height: 45.5em;
+    border: none;
+    background-color: var(--color-primary);
+
+
+}

@@ -1,0 +1,134 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bodyCard{
+    display: flex;
+    justify-content: space-between;
+    width: 95em;
+    height: 40em;
+    border-radius: 3em;
+    padding: 2%;
+    background-color:var(--color-beige)
+
+
+}
+
+.left{
+    display: flex ;
+    flex-direction: column;
+    gap: 1em;
+    width: 60em;
+    height: 40em;
+    border-radius: 3em;
+    background-color: var(--color-beige)
+
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    width: 33em;
+    height: 40em;
+    border-radius:  3em;
+    background-color: var(--color-beige)
+
+}
+
+.upRight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width:auto;
+    height: 30em;
+    border-radius: 3em;
+    background-color: var(--color-primary);
+    margin-bottom: 1.5em;
+}
+
+.downRight{
+    display: flex;
+
+    width: auto;
+    height: 7.5em;
+    border-radius: 2em;
+    background-color: var(--color-primary);
+    padding: 0em 1.5em;
+}
+.downRight p{
+    font-size: 20px;
+    margin: 0.2em;
+    color: var(--color-font)
+
+}
+
+.upLeft{
+    display: flex;
+    align-items: center;
+    width: auto;
+    padding: 1em;
+    height: 6em;
+    border-radius: 3em 3em 0em 0em;
+    background-color: var(--color-primary);
+
+  
+}
+.upLeft h1{
+    color: var(--color-font);
+}
+.upLeft img{
+    object-fit: cover;
+    margin: 0.5em;
+    width: 6em;
+    height: 6em;
+    border-radius: 6em;
+
+    color: black;
+}
+
+.downLeft{
+    
+    width:auto;
+    height: 30.5em;
+    border-radius: 0em 0em 3em 3em;
+    background-color: var(--color-primary);
+
+
+}
+
+.title{ 
+    padding: 0.5em 1.5em;
+    width: auto;
+    height: 5em;
+}
+.title h1{
+    font-size: 30px;
+    color: var(--color-font);
+    margin: 0em;
+   
+    
+}
+
+.description{
+    padding: 0em 1.5em;
+    width:auto;
+    height: 24.5em;
+    border-radius: 0em 0em 3em 3em;
+    white-space: pre-line; 
+    overflow: hidden;  
+    text-overflow: ellipsis;
+    
+}
+
+.description p{
+    font-size: 24px;
+    color: var(--color-font);
+    margin: 0em;
+  
+   
+
+}

@@ -1,0 +1,8 @@
+.bodyNavbar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 9em;
+    height: 100%;
+    background-color: var(--color-blue);
+}
