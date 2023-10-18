@@ -62,7 +62,6 @@ export const Navbar = ({ sidebarOpen, setSidebarOpen }) => {
           </NavLink>
         </div>
       ))}
-      <Divider />
       <div className="Themecontent">
         {sidebarOpen && <span className="titletheme"></span>}
         <div className="Togglecontent">
@@ -123,10 +122,11 @@ const secondarylinksArray = [
 ];
 
 const Container = styled.div`
-height: 100vh;
+ position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   color: ${(props) => props.theme.text};
   background: ${(props) => props.theme.bg};
-  position: sticky;
   padding-top: 30px;
   .Sidebarbutton {
     position: absolute;
