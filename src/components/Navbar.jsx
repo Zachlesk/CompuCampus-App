@@ -82,7 +82,6 @@ export const Navbar = ({ sidebarOpen, setSidebarOpen }) => {
     </Container>
   );
 }
-//#region Data links
 const linksArray = [
   {
     label: "Home",
@@ -118,9 +117,7 @@ const secondarylinksArray = [
     to: "/null",
   },
 ];
-//#endregion
 
-//#region STYLED COMPONENTS
 const Container = styled.div`
 height: 100vh;
   color: ${(props) => props.theme.text};
