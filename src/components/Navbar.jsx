@@ -32,8 +32,12 @@ export const Navbar = ({ sidebarOpen, setSidebarOpen }) => {
       </button>
       <div className="Logocontent">
         <div className="imgcontent">
+          <img
+            className=" h-6 w-24 rounded-full ring-2 ring-white"
+            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+            alt=""
+          />
         </div>
-        <h2>CompuCampus</h2>
       </div>
       {linksArray.map(({ icon, label, to }) => (
         <div className="LinkContainer" key={label}>
@@ -151,6 +155,8 @@ height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    display: ${({ isopen }) => (isopen ? `flex` : `none`)};
+
 
     padding-bottom: ${v.lgSpacing};
     .imgcontent {
@@ -163,9 +169,7 @@ height: 100vh;
       transition: all 0.3s;
       transform: ${({ isopen }) => (isopen ? `scale(0.7)` : `scale(1.5)`)};
     }
-    h2 {
-      display: ${({ isopen }) => (isopen ? `block` : `none`)};
-    }
+  
   }
   .LinkContainer {
     margin: 8px 0;
