@@ -11,3 +11,5 @@ INSERT INTO `estado` (`nombre_estado`) VALUES ('Estado 1'), ('Estado 2');
 
 -- Arreglado el query de insert into a la tabla estados solicitud
 INSERT INTO `estadosolicitud` (`id_est_solicitud`, `id_camper`, `id_oferta`, `id_estado`, `observacion`) VALUES ('1', '1221225', '1', '1', 'Observacion 1\r\n');
+
+INSERT INTO `estadosolicitud` (`id_est_solicitud`, `id_camper`, `id_oferta`, `id_estado`, `observacion`) VALUES (NULL, '225458', '2', '2', 'estado 2');
