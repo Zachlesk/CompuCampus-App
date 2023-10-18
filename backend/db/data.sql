@@ -9,4 +9,5 @@ INSERT INTO `oferta` (`id_empresa`, `id_ruta`, `titulo_oferta`, `descripcion_ofe
 INSERT INTO `campers` (`id_camper`,`nombre_camper`, `cv`, `id_ruta`, `id_grupo`) VALUES (1221225,'Camper 1', 'CV 1', 1, 1), (225458,'Camper 2', 'CV 2', 2, 2);
 INSERT INTO `estado` (`nombre_estado`) VALUES ('Estado 1'), ('Estado 2');
 
-INSERT INTO `estadoSolicitud` (`id_camper`, `id_oferta`, `id_estado`, `observacion`) VALUES (1, 1, 1, 'Observacion 1'), (2, 2, 2, 'Observacion 2');
+-- Arreglado el query de insert into a la tabla estados solicitud
+INSERT INTO `estadosolicitud` (`id_est_solicitud`, `id_camper`, `id_oferta`, `id_estado`, `observacion`) VALUES ('1', '1221225', '1', '1', 'Observacion 1\r\n');
