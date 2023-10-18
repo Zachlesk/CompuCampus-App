@@ -1,6 +1,7 @@
 {
     "conventionalCommits.scopes": [
         "Post and postulacion Components",
-        "Add circle bar progress"
+        "Add circle bar progress",
+        "Add Vacant Component"
     ]
 }
