@@ -1,50 +1,44 @@
 import dotenv from 'dotenv';
 import express from 'express';
 
-import getConnection from '../connection/connection';
+import cnx from '../connection/connection.js';
 
-const db = getConnection();
+const db = cnx;
 
 dotenv.config();
 
 const app = express();
 
 app.post("/api/publicar", async (req, res)=> {
-    const { empresaKey, id_ruta, titulo_oferta, descripcion_oferta, jornada_oferta, sueldo_oferta } = req.body;
+    const { empresaKey, id_empresa, id_ruta, titulo_oferta, descripcion_oferta, jornada_oferta, sueldo_oferta } = req.body;
 
-    if (!empresaKey || !id_ruta || !titulo_oferta || !descripcion_oferta || !jornada_oferta || !sueldo_oferta) {
+    if (!empresaKey || !id_empresa || !id_ruta || !titulo_oferta || !descripcion_oferta || !jornada_oferta || !sueldo_oferta) {
       return res.status(400).json({ mensaje: 'Todos los campos son obligatorios' });
     }
   
-    const query = 'SELECT * FROM empresa WHERE empresaKey = ?';
-    db.query(query, [empresaKey], (err, results) => {
+    const clavePredefinida = "HVY619"
+
+    if (empresaKey !== clavePredefinida) {
+      return res.status(401).json({ mensaje: 'Clave de empresa no válida' });
+    }
+  
+    const ofertaData = {
+      id_empresa,
+      id_ruta,
+      titulo_oferta,
+      descripcion_oferta,
+      jornada_oferta,
+      sueldo_oferta,
+    };
+  
+    const insertOfertaQuery = 'INSERT INTO oferta SET ?';
+    db.query(insertOfertaQuery, ofertaData, (err, result) => {
       if (err) {
-        console.error('Error al verificar la clave de la empresa: ' + err.message);
+        console.error('Error al insertar oferta: ' + err.message);
         return res.status(500).json({ mensaje: 'Error al publicar la oferta' });
       }
-  
-      if (results.length === 0) {
-        return res.status(401).json({ mensaje: 'Clave de empresa no válida' });
-      }
-  
-      const ofertaData = {
-        id_empresa: results[0].id_empresa,
-        id_ruta,
-        titulo_oferta,
-        descripcion_oferta,
-        jornada_oferta,
-        sueldo_oferta,  
-      };
-  
-      const insertOfertaQuery = 'INSERT INTO oferta SET ?';
-      db.query(insertOfertaQuery, ofertaData, (err, result) => {
-        if (err) {
-          console.error('Error al insertar oferta: ' + err.message);
-          return res.status(500).json({ mensaje: 'Error al publicar la oferta' });
-        }
-        console.log('Oferta publicada con éxito');
-        res.status(200).json({ mensaje: 'Oferta publicada con éxito' });
-      });
+      console.log('Oferta publicada con éxito');
+      res.status(200).json({ mensaje: 'Oferta publicada con éxito' });
     });
   });
 
