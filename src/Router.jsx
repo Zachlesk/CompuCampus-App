@@ -5,6 +5,7 @@ import { Light, Dark } from "./styles/themes";
 import { ThemeProvider } from "styled-components";
 import { HomeView } from "./views/Home";
 import { Navbar} from "./components/Navbar";
+import { Vacante} from './components/Vacante/Vacante'
 import {Agregar} from "./components/Agregar/Agregar"
 import {OfertaAplicada} from "./components/OfertaAplicada/OfertaAplicada"
 
@@ -28,6 +29,8 @@ export const Router = () => {
             <Route path="/" element={<HomeView />} />
             <Route path="/add" element={<Agregar/>} />
             <Route path="/applications" element={<OfertaAplicada/>} />
+            <Route path="/download" element={<Vacante/>} />
+            
           </Routes>
             </Container>
         </BrowserRouter>

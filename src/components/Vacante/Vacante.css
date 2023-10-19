@@ -5,8 +5,9 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 90em;
-    height: 58em;
+    padding: 0em 0em 0em 4em ;
+    width: 110em;
+    height: 65.6em;
     background-color: var(--color-primary);
 
 }
@@ -22,13 +23,14 @@
 }
 
 .sec1 h1{
+    font-size: 35px;
     font-weight: 600;
     color: var(--color-font);
 }
 
 .sec1 h3{
     position: relative;
-    bottom: 1.8em;
+    font-size: 20px;
     font-weight: 500;
     color: var(--color-font);
 
@@ -40,6 +42,11 @@
     
 }
 
+
+.sec2 h1 {
+
+   color: var(--color-font); 
+}
 .sec2 p{
     color: var(--color-font);
     white-space: pre-line;
@@ -53,9 +60,9 @@ display: flex;
 align-items: center ;
 border-radius: 0em;
 gap: 0em;
-width: 36em;
-height: 50em;
-background-color:var(--color-primary);
+width: 30em !important;
+height: 45em !important;
+background-color:transparent !important;
 }
 
 
@@ -82,6 +89,7 @@ img{
 
 }
 .middle h1{
+    font-size: 24px;
     font-weight:normal; 
     color: var(--color-font);    
 }

@@ -18,7 +18,7 @@ body{
 .bodyCard{
     display: flex;
     justify-content: space-between;
-    width: 95em;
+    width: 93.5em;
     height: 40em;
     border-radius: 3em;
     padding: 2%;
@@ -135,7 +135,7 @@ body{
 }
 
 .description p{
-    font-size: 24px;
+    font-size: 20px;
     color: var(--color-font);
     margin: 0em;
   
