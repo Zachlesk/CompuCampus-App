@@ -7,7 +7,7 @@
     border-radius: 2em;
     height: 52em;
     background-color: var(--color-beige);
-
+  margin: 0 auto;
 }
 
 form{
@@ -17,11 +17,11 @@ form{
     align-items:self-start;
     padding: 0em 0em 1em 12em;
     
-    margin: 0.5em;
+    margin: 0 auto;
     
 }
 .buttonDiv{
-
+    margin: 0 auto;
     width: 75em;
     height: 5em;
     display: flex;
@@ -33,7 +33,7 @@ form{
     justify-content: center;
     align-items: center;
     margin: 1em;
-    width: 20em;
+    width: 18em;
     height: 3.5em;
     background-color: var(--color-blue);
     border-radius: 1em;

@@ -32,7 +32,7 @@ export const Agregar = () => {
   };
 
   return (
-    <form>
+    <form className=''>
       <div className='buttonDiv'>
         <button onClick={handlePublicarClick} className="buttonForm">
           <p>Publicar</p>
