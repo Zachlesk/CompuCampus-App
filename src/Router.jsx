@@ -5,6 +5,8 @@ import { Light, Dark } from "./styles/themes";
 import { ThemeProvider } from "styled-components";
 import { HomeView } from "./views/Home";
 import { Navbar} from "./components/Navbar";
+import {Agregar} from "./components/Agregar/Agregar"
+import {OfertaAplicada} from "./components/OfertaAplicada/OfertaAplicada"
 
 export const ThemeContext = React.createContext(null);
 
@@ -24,6 +26,8 @@ export const Router = () => {
             />
           <Routes>
             <Route path="/" element={<HomeView />} />
+            <Route path="/add" element={<Agregar/>} />
+            <Route path="/applications" element={<OfertaAplicada/>} />
           </Routes>
             </Container>
         </BrowserRouter>

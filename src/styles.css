@@ -8,3 +8,21 @@
   box-sizing: border-box;
   font-family: "Poppins";
 }
+body{
+  overflow: hidden;
+}
+
+:root {
+  
+  --color-blue:rgb(100, 108, 255);
+  --color-primary:rgb(255, 255, 255);
+  --color-beige:rgba(217, 217, 217, 1);
+  --color-font:rgba(38, 38, 38, 1);
+
+}
+
+.fixedNavbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
