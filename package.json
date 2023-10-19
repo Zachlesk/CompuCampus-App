@@ -1,0 +1,25 @@
+{
+  "name": "compucampus-app",
+  "version": "1.0.0",
+  "description": "Aplicativo para push-up, ofertas y selección de trabajo para los campers, utilizando tecnologias de desarrollo como Node.js, React y MySQL.",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "class-transformer": "0.5.1",
+    "class-validator": "0.14.0",
+    "dotenv": "16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "7.0.1",
+    "jose": "4.14.4",
+    "mysql2": "3.4.5",
+    "nodemon": "3.0.1",
+    "reflect-metadata": "0.1.13",
+    "ts-node": "^10.9.1"
+  }
+}
