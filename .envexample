@@ -1,6 +1,0 @@
-MY_CONFIG={"hostname":"127.3.3.3", "port":5100}
-MY_CONNECT={"host":"localhost",
-"database":"", 
-"user": "", 
-"password": "", "port":3306} 
-JWT_PRIVATE_KEY=
