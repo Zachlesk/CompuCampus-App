@@ -40,15 +40,11 @@ export const Router = () => {
   )
 } 
 const Container = styled.div`
-position: -webkit-sticky;
-  position: sticky;
-  top: 0;
+  
   display: grid;
-  grid-template-columns: 90px auto;
+  grid-template-columns: 1fr auto;
   background: ${({ theme }) => theme.bgtotal};
   transition:all 0.3s ;
-  &.active {
-    grid-template-columns: 300px auto;
-  }
+  height: 100%;
   color:${({ theme }) => theme.text};
 `;

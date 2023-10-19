@@ -26,7 +26,7 @@ export const Navbar = ({ sidebarOpen, setSidebarOpen }) => {
   };
 
   return (
-    <Container isopen={sidebarOpen} themeuse={theme}>
+    <Container2 isopen={sidebarOpen} themeuse={theme}>
       <button className="Sidebarbutton" onClick={ModSidebaropen}>
         <AiOutlineLeft />
       </button>
@@ -82,7 +82,7 @@ export const Navbar = ({ sidebarOpen, setSidebarOpen }) => {
           </div>
         </div>
       </div>
-    </Container>
+    </Container2>
   );
 }
 const linksArray = [
@@ -121,9 +121,12 @@ const secondarylinksArray = [
   },
 ];
 
-const Container = styled.div`
- position: -webkit-sticky;
-  position: sticky;
+const Container2 = styled.div`
+  position: fixed;
+  left: 0;
+  padding: 0px 60px 0 10px ;
+  width: inherit;
+  height: 100vh;
   top: 0;
   color: ${(props) => props.theme.text};
   background: ${(props) => props.theme.bg};
