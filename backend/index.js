@@ -6,12 +6,14 @@ import notificacionRoutes from './src/routes/notificacion.routes.js'
 import ofertaRoutes from './src/routes/oferta.routes.js'
 import campersRoutes from './src/routes/campers.routes.js'
 import estadoSolicitudRoutes from './src/routes/estado.solicitud.routes.js'
+import { CONFIG } from "./config/credentials.js";
+
+
 
 console.clear();
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT 
 
 app.use(express.json());
 app.use(morgan('dev'));
@@ -23,8 +25,8 @@ app.use("/", estadoSolicitudRoutes);
 
 
 const main = () => {
-    app.listen(PORT, ()=> {
-        console.log(`Server is running on port ${PORT}`)
+    app.listen(CONFIG, ()=> {
+        console.log(`Server is running http://${CONFIG.hostname}:${CONFIG.port}`);
     });
   };
 
