@@ -1,9 +1,8 @@
-import {config} from "dotenv";
-
-config();
+import dotenv from 'dotenv';
+dotenv.config();
 
 export default {
-    host : process.env.HOSTNAME,
+    host : process.env.HOST,
     database : process.env.DATABASE,
     user : process.env.USER,
     password : process.env.PASSWORD
