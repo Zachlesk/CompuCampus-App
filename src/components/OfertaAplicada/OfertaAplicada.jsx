@@ -10,7 +10,7 @@ export const OfertaAplicada = () => {
     useEffect(() => {
         const getOfertas = async () => {
             try {
-                const response = await axios.get("http://127.0.0.1:0000/api/ofertas/getAll");
+                const response = await axios.get("http://127.0.0.1:0000/api/campers");
                 const data = response.data;
                 const arreglo = Object.values(data);
                 console.log(arreglo[0]);

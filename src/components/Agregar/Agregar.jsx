@@ -19,7 +19,7 @@ export const Agregar = () => {
     };
 
     try {
-      const response = await axios.post("http://127.0.0.1:0000/api/ofertas/add", postData);
+      const response = await axios.post("http://127.0.0.1:0000/api/campers", postData);
 
    
       console.log("Solicitud POST exitosa:", response.data);

@@ -9,7 +9,7 @@ export const Vacante = () => {
   useEffect(() => {
     const obtenerVacantePorId = async () => {
       try {
-        const response = await axios.get(`http://127.0.0.1:0000/api/vacantes/getById/${id}`);
+        const response = await axios.get(`http://127.0.0.1:0000/api/campers/${id}`);
         setVacante(response.data);
       } catch (error) {
         console.log('Ocurrió un error al obtener la vacante por ID');
