@@ -1,20 +1,26 @@
+.backgroundContainer{
+    padding: 2em;
+    width: 120em !important;
+    height: 58em !important;
+    display: flex;
+   justify-content: center !important;
+   align-items: center !important;
+   
 
+}
 
 
 .bodyVacants{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 0em 0em 0em 4em ;
-    width: 110em;
-    height: 65.6em;
-    background-color: var(--color-primary);
+    padding: 8em 0em 0em 8em ;
+    width: 80em;
+    height: 55em;
+
 
 }
 
-.rigth{
-    background-color: var(--color-primary);
-}
 
 .sec1{
    
@@ -38,7 +44,7 @@
 
 .sec2 {
     width: 50em;
-    height: 45em;
+    height: 40em;
     
 }
 

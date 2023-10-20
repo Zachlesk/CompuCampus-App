@@ -5,9 +5,9 @@
     padding: 0.5em;
     width: 75em;
     border-radius: 2em;
-    height: 52em;
+    height: 50.5em;
     background-color: var(--color-beige);
-  margin: 0 auto;
+
 }
 
 form{
@@ -15,13 +15,13 @@ form{
     display: flex;
     flex-direction: column;
     align-items:self-start;
-    padding: 0em 0em 1em 12em;
+    padding: 0em 0em 1em 35em;
     
-    margin: 0 auto;
+    margin: 0.5em;
     
 }
 .buttonDiv{
-    margin: 0 auto;
+
     width: 75em;
     height: 5em;
     display: flex;
@@ -33,7 +33,7 @@ form{
     justify-content: center;
     align-items: center;
     margin: 1em;
-    width: 18em;
+    width: 20em;
     height: 3.5em;
     background-color: var(--color-blue);
     border-radius: 1em;
@@ -106,7 +106,7 @@ form{
     font-size: 16px ;
     outline: none;
     border-radius: 2em;
-    height: 45.5em;
+    height: 35em !important;
     border: none;
     background-color: var(--color-primary);
 
