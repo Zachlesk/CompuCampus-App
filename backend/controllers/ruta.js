@@ -22,7 +22,7 @@ console.log(data);
 
 }
 
-export async function getrutas(req,res){
+export async function getRutas(req,res){
 cnx.query(/*sql */ `SELECT * FROM ruta`, (err,data,fil)=>{
     if (err) {
       console.error("Error al obtener rutas: " + err.message);

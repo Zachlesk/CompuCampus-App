@@ -7,6 +7,7 @@ import ofertaRoutes from './src/routes/oferta.routes.js'
 import campersRoutes from './src/routes/campers.routes.js'
 import gruposRoutes from './src/routes/grupo.routes.js'
 import empresaRoutes from './src/routes/empresa.routes.js'
+import rutasRoutes from './src/routes/rutas.routes.js'
 console.clear();
 dotenv.config();
 
@@ -21,6 +22,7 @@ app.use("/", ofertaRoutes);
 app.use("/", campersRoutes);
 app.use("/", gruposRoutes);
 app.use("/",empresaRoutes);
+app.use("/",rutasRoutes);
 
 const main = () => {
     app.listen(PORT, ()=> {

@@ -6,13 +6,7 @@ import { empresaValidation } from "../storage/empresa.js";
 
 const app=express();
 
-app.post("/api/empresa", empresaValidation, (req, res, next) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
-    }
-    next();
-  }, postEmpresa);
+app.post("/api/empresa", empresaValidation, postEmpresa);
   
 app.get("/api/empresa",getEmpresas);
 
