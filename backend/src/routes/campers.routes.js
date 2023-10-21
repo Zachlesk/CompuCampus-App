@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 import express from "express";
 
 import cnx from "../connection/connection.js";
+import { camperValidation } from "../storage/camper.js";
 
 const db = cnx;
 
@@ -46,7 +47,7 @@ app.get("/api/campers/:id", async (req, res) => {
   }
 });
 
-app.post("/api/campers", async (req, res) => {
+app.post("/api/campers", camperValidation,async (req, res) => {
   const { nombre_camper, cv, id_ruta, id_grupo } = req.body;
   console.log(req.body);
   const camperData = {
@@ -66,7 +67,7 @@ app.post("/api/campers", async (req, res) => {
   });
 });
 
-app.patch("/api/campers/:id", async (req, res) => {
+app.patch("/api/campers/:id",async (req, res) => {
   const id = req.params.id;
   console.log(id);
   const { nombre_camper, cv, id_ruta, id_grupo } = req.body;

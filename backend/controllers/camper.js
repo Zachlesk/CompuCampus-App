@@ -1,5 +1,3 @@
-
-
 export async function postCamper(){
     const {id_camper,nombre_camper,cv, id_ruta, id_grupo}=req.body
     const datos={id_camper,nombre_camper,cv, id_ruta, id_grupo};

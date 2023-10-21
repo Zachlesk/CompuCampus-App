@@ -2,6 +2,7 @@ import dotenv from 'dotenv';
 import express from 'express';
 
 import cnx from '../connection/connection.js';
+import { ofertaValidation } from '../storage/oferta.js';
 
 const db = cnx;
 
@@ -42,7 +43,7 @@ app.post("/api/publicar", async (req, res)=> {
     });
   });
 
-app.post('/api/seleccionar', (req, res) => {
+app.post('/api/seleccionar',ofertaValidation ,(req, res) => {
     const { id_camper, id_oferta } = req.body;
   
     const countQuery = 'SELECT COUNT(*) as seleccion_count FROM estadoSolicitud WHERE id_camper = ?';

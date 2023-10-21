@@ -1,34 +1,34 @@
 import cnx from '../src/connection/connection.js'
 
-export async function postGrupo(req,res){
+export async function postRuta(req,res){
 
-const { id_grupo, nombre_grupo } = req.body;
+const { id_ruta, nombre_ruta } = req.body;
   console.log(req.body);
-  const grupoData = {
-    id_grupo,
-    nombre_grupo
+  const rutaData = {
+    id_ruta,
+    nombre_ruta
   };
-  cnx.query(/*sql */ `INSERT INTO grupo SET ?`,[grupoData], (err,data,fil)=>{
+  cnx.query(/*sql */ `INSERT INTO ruta SET ?`,[rutaData], (err,data,fil)=>{
     if (err) {
         console.error("Error al ejecutar la consulta de inserción: ", err);
         res.status(500).send("Error al ejecutar la consulta de inserción");
         return;
     }
 
-console.log("post grupo");
+console.log("post ruta");
 res.send(JSON.stringify(data));
 console.log(data);
 })
 
 }
 
-export async function getGrupos(req,res){
-cnx.query(/*sql */ `SELECT * FROM grupo`, (err,data,fil)=>{
+export async function getrutas(req,res){
+cnx.query(/*sql */ `SELECT * FROM ruta`, (err,data,fil)=>{
     if (err) {
-      console.error("Error al obtener grupos: " + err.message);
+      console.error("Error al obtener rutas: " + err.message);
       return res.status(500).json({ mensaje: "Error al obtener campers" });
     }
-    console.log("Grupos obtenidos con éxito");
+    console.log("rutas obtenidos con éxito");
     res.status(200).json(data);
   });
 ;
