@@ -1,8 +1,9 @@
 import { Chip } from '@nextui-org/react'
+import { sendEmail } from '../services/compucampus'
 export const VacantCard = () => {
   return (
     <a
-      href="#"
+      
       className="relative block overflow-hidden rounded-lg border border-gray-100 p-4 sm:p-6 lg:p-8 mt-10"
     >
       <span
@@ -32,7 +33,7 @@ export const VacantCard = () => {
         <div className="">
           <a
             className="group relative inline-flex items-center overflow-hidden rounded border border-current px-6 py-2 text-indigo-600 focus:outline-none focus:ring active:text-indigo-500"
-            href="/download"
+            
           >
             <span className="absolute -start-full transition-all group-hover:start-4">
               <svg
@@ -51,9 +52,9 @@ export const VacantCard = () => {
               </svg>
             </span>
 
-            <span className="text-sm font-medium transition-all group-hover:ms-4">
+            <button onClick={sendEmail} className="text-sm font-medium transition-all group-hover:ms-4">
               Details
-            </span>
+            </button>
           </a>
 
 

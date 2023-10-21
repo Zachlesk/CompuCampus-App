@@ -1,19 +1,16 @@
-import {config} from "dotenv";
-
-config();
-
 import nodemailer from 'nodemailer';
+import { CONFIG } from "../../config/credentials.js";
 
-const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 465,
-    secure: true,
-    service: 'gmail',
-    auth: {
-        user: process.env.EMAIL,  
-        pass: process.env.EMAIL_PASSWORD
-    }
+
+export const transporter = nodemailer.createTransport({
+  host: 'smtp.ethereal.email',
+  port: 587,
+  secure: false,
+  auth: {
+    user: `${CONFIG.user_email}`,
+    pass: `${CONFIG.user_password}`,
+  },
+   
 })
 
 
-export default transporter
