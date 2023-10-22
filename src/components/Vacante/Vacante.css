@@ -1,0 +1,172 @@
+.backgroundContainer{
+    padding: 2em;
+    width: 120em !important;
+    height: 58em !important;
+    display: flex;
+   justify-content: center !important;
+   align-items: center !important;
+   
+
+}
+
+
+.bodyVacants{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 8em 0em 0em 8em ;
+    width: 80em;
+    height: 55em;
+
+
+}
+
+
+.sec1{
+   
+    width: 50em;
+    height: 8em;
+}
+
+.sec1 h1{
+    font-size: 35px;
+    font-weight: 600;
+    color: var(--color-font);
+}
+
+.sec1 h3{
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--color-font);
+
+}
+
+.sec2 {
+    width: 50em;
+    height: 40em;
+    
+}
+
+
+.sec2 h1 {
+
+   color: var(--color-font); 
+}
+.sec2 p{
+    color: var(--color-font);
+    white-space: pre-line;
+    font-size: 14px;
+    overflow: hidden;  
+    text-overflow: ellipsis;
+}
+
+.left{
+display: flex;
+align-items: center ;
+border-radius: 0em;
+gap: 0em;
+width: 30em !important;
+height: 45em !important;
+background-color:transparent !important;
+}
+
+
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    width: 10em;
+    height: 10em;
+    background-color: var(--color-beige);
+}
+
+img{
+    border-radius: 1em;
+    width: 8.5em;
+    height: 8.5em;
+}
+
+.middle{
+    font-size: 12px;
+    text-align: center;
+
+
+}
+.middle h1{
+    font-size: 24px;
+    font-weight:normal; 
+    color: var(--color-font);    
+}
+
+.square{
+    border-radius: 2em;
+    width: 25em;
+    height: 25em;
+    background-color: var(--color-beige)
+}
+
+.category{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3em;
+   
+    height: 5em;
+}
+.category p{    
+    font-size: 20px;
+    font-weight:600;
+   color: var(--color-font);
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10em;
+    height: 2.5em;
+    border-radius: 6em;
+    border: 3px solid var(--color-font);
+
+}
+
+.traits{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    place-items: center ;
+    gap: 0.3em;
+    width: auto;
+    height: 20em;
+    border-radius: 2em;
+}
+
+.boxy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 9.9em;
+    height: 9.5em;
+    border-radius: 2em;
+}
+
+.boxy label{
+
+    color: var(--color-font);
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.boxy p{
+    color: var(--color-font);
+    background-color: var(--color-primary);
+    padding: 0px 10px 0px;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 4em;
+    width: auto;
+    height: 2em;
+}

@@ -1,0 +1,32 @@
+
+.container-circular {
+  height: 25em;
+  width: 35em;
+  background-color: transparent;
+ border-radius: 3em;
+  display: grid;
+  place-items: center;
+}
+.circular-progress {
+    
+  position: relative;
+  height: 23em;
+  width: 23em;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.circular-progress:before {
+  content: "";
+  position: absolute;
+  height: 84%;
+  width: 84%;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+}
+.value-container {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-size: 50px;
+  color: #231c3d;
+}
